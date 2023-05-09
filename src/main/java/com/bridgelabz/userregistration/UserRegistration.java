@@ -1,6 +1,5 @@
 package com.bridgelabz.userregistration;
 
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,7 +11,7 @@ public class UserRegistration {
         return matcher.matches();
     }
 
-    public int Name(String firstName){
+    public int Name(String firstName) {
         int temp = 0;
         UserRegistration.checkValidity(firstName);
         if (UserRegistration.checkValidity(firstName)) {
@@ -35,7 +34,7 @@ public class UserRegistration {
         return temp;
     }
 
-    public int phNum(String phNum){
+    public int phNum(String phNum) {
         int temp = 0;
         Pattern pattern = Pattern.compile("^[+]91[0-9]{10}$");
         Matcher matcher = pattern.matcher(phNum);
@@ -47,7 +46,7 @@ public class UserRegistration {
         return temp;
     }
 
-    public int password(String password){
+    public int password(String password) {
         int temp = 0;
         Pattern pattern = Pattern.compile("^[A-Z][0-9][$&+,:;=?@#|'<>.-^*()%!][a-zA-Z0-9]{5}$");
         Matcher matcher = pattern.matcher(password);
