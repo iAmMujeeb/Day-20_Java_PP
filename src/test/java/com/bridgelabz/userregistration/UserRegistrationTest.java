@@ -28,21 +28,21 @@ public class UserRegistrationTest {
     }
 
     @Test
-    void checkEmailId(){
+    void checkEmailId() {
         String emailId = "abc+100@gmail.com";
         int temp = userRegistration.emailId(emailId);
         Assertions.assertEquals(1, temp);
     }
 
     @Test
-    void checkPhNum(){
+    void checkPhNum() {
         String phNum = "+919702667788";
         int temp = userRegistration.phNum(phNum);
         Assertions.assertEquals(1, temp);
     }
 
     @Test
-    void checkPassword(){
+    void checkPassword() {
         String password = "M1@asdfg";
         int temp = userRegistration.password(password);
         Assertions.assertEquals(1, temp);
