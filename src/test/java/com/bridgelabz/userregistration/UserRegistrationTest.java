@@ -28,7 +28,21 @@ public class UserRegistrationTest {
     }
 
     @Test
-    void checkEmailId() {
+    void checkEmailId1() {
+        String emailId = "abc@yahoo.com";
+        int temp = userRegistration.emailId(emailId);
+        Assertions.assertEquals(1, temp);
+    }
+
+    @Test
+    void checkEmailId2() {
+        String emailId = "abc-100@abc.net";
+        int temp = userRegistration.emailId(emailId);
+        Assertions.assertEquals(1, temp);
+    }
+
+    @Test
+    void checkEmailId3() {
         String emailId = "abc+100@gmail.com";
         int temp = userRegistration.emailId(emailId);
         Assertions.assertEquals(1, temp);
